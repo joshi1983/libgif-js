@@ -757,7 +757,7 @@
                 }
 
                 if (i < 0){
-                    i = 0;
+                    i = frames.length - 1;
                 }
 
                 offset = frameOffsets[i];
