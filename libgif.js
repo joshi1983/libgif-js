@@ -73,9 +73,11 @@
 }(this, function () {
     // Generic functions
     var bitsToNum = function (ba) {
-        return ba.reduce(function (s, n) {
-            return s * 2 + n;
-        }, 0);
+        let result = 0;
+        for (let i = 0; i < ba.length; i++) {
+            result = (result << 1) | ba[i];
+        }
+        return result;
     };
 
     var byteToBitArr = function (bite) {
